@@ -216,3 +216,258 @@ df.groupby('col')['val'].sum()
 * Compiled to bytecode (`.pyc`), then interpreted by PVM
 * No machine code compilation
 * Easier debugging and portability
+* 
+
+Python OOPs (Object-Oriented Programming) interview questions:
+
+✅ Basic OOPs Concepts
+What is OOPs in Python?
+
+What are the four pillars of OOPs?
+
+Encapsulation, Abstraction, Inheritance, Polymorphism
+
+What is a class and an object in Python?
+
+How is __init__ method used?
+
+What is self in Python classes?
+
+🔁 Inheritance & Polymorphism
+What is inheritance in Python?
+
+Types of inheritance in Python?
+
+What is method overriding?
+
+What is method overloading?
+
+What is multiple inheritance?
+
+🔒 Encapsulation & Abstraction
+What is encapsulation in Python?
+
+How do you implement abstraction?
+
+What are private, protected, and public attributes?
+
+🔧 Advanced OOP Concepts
+What is a class method and how is it defined?
+
+What is a static method?
+
+What are @classmethod and @staticmethod?
+
+What is the difference between isinstance() and issubclass()?
+
+What is composition vs inheritance?
+
+What are dunder/magic methods (e.g., __str__, __len__)?
+
+What is the purpose of super()?
+
+
+### Python OOPs Interview Questions and Answers
+
+---
+
+#### 1. What is OOPs in Python?
+
+Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes to structure software. Python supports OOP, allowing for modular, reusable, and scalable code.
+
+---
+
+#### 2. What are the four pillars of OOPs?
+
+* **Encapsulation**: Binding data and methods together and restricting access.
+* **Abstraction**: Hiding complex implementation details and exposing only the necessary parts.
+* **Inheritance**: Deriving new classes from existing ones.
+* **Polymorphism**: Performing a single action in different ways.
+
+---
+
+#### 3. What is a class and an object in Python?
+
+* **Class**: A blueprint for creating objects. It defines attributes and methods.
+* **Object**: An instance of a class with actual values.
+
+```python
+class Car:
+    def __init__(self, brand):
+        self.brand = brand
+
+my_car = Car("Toyota")
+```
+
+---
+
+#### 4. How is `__init__` method used?
+
+The `__init__` method is a constructor called when an object is instantiated. It initializes the object’s attributes.
+
+```python
+class Person:
+    def __init__(self, name):
+        self.name = name
+```
+
+---
+
+#### 5. What is `self` in Python classes?
+
+`self` represents the instance of the class. It is used to access attributes and methods within the class.
+
+---
+
+#### 6. What is inheritance in Python?
+
+Inheritance allows a class (child) to inherit attributes and methods from another class (parent).
+
+```python
+class Animal:
+    def speak(self):
+        return "Sound"
+
+class Dog(Animal):
+    def speak(self):
+        return "Bark"
+```
+
+---
+
+#### 7. Types of inheritance in Python?
+
+* Single
+* Multiple
+* Multilevel
+* Hierarchical
+* Hybrid
+
+---
+
+#### 8. What is method overriding?
+
+Defining a method in the child class with the same name as in the parent class to change its behavior.
+
+---
+
+#### 9. What is method overloading?
+
+Python does not support method overloading by default. It can be emulated using default parameters or `*args` and `**kwargs`.
+
+---
+
+#### 10. What is multiple inheritance?
+
+A child class inheriting from more than one parent class.
+
+```python
+class A:
+    pass
+class B:
+    pass
+class C(A, B):
+    pass
+```
+
+---
+
+#### 11. What is encapsulation in Python?
+
+Encapsulation is restricting access to methods and variables using access modifiers (public, protected `_`, private `__`).
+
+---
+
+#### 12. How do you implement abstraction?
+
+Using abstract base classes from the `abc` module.
+
+```python
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+```
+
+---
+
+#### 13. What are private, protected, and public attributes?
+
+* **Public**: Accessible from anywhere.
+* **Protected**: Prefix with `_`, internal use.
+* **Private**: Prefix with `__`, inaccessible directly from outside.
+
+---
+
+#### 14. What is a class method and how is it defined?
+
+Class methods use `@classmethod` and take `cls` as the first parameter.
+
+```python
+class MyClass:
+    count = 0
+
+    @classmethod
+    def increment(cls):
+        cls.count += 1
+```
+
+---
+
+#### 15. What is a static method?
+
+Static methods use `@staticmethod` and do not take `self` or `cls` as arguments.
+
+```python
+class Math:
+    @staticmethod
+    def add(x, y):
+        return x + y
+```
+
+---
+
+#### 16. What are `@classmethod` and `@staticmethod`?
+
+* **@classmethod**: Operates on the class.
+* **@staticmethod**: Utility function with no access to class or instance.
+
+---
+
+#### 17. What is the difference between `isinstance()` and `issubclass()`?
+
+* `isinstance(obj, Class)` checks if `obj` is an instance of `Class`.
+* `issubclass(Sub, Super)` checks if `Sub` is a subclass of `Super`.
+
+---
+
+#### 18. What is composition vs inheritance?
+
+* **Inheritance**: "is-a" relationship.
+* **Composition**: "has-a" relationship; one class contains another.
+
+---
+
+#### 19. What are dunder/magic methods?
+
+Special methods with double underscores like `__str__`, `__len__`, `__add__` used to define behavior of objects.
+
+---
+
+#### 20. What is the purpose of `super()`?
+
+`super()` is used to call the parent class methods.
+
+```python
+class Parent:
+    def show(self):
+        print("Parent")
+
+class Child(Parent):
+    def show(self):
+        super().show()
+        print("Child")
+```
+
